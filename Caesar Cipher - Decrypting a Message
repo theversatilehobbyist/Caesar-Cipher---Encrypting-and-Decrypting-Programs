@@ -1,0 +1,22 @@
+#Caesar Cipher Decrypting
+def caesar_decrypt():
+    alphabet_string = 'abcdefghijklmnopqrstuvwxyzabc'
+    input_string = input('Give me a word and I will give you the word, except decrypted ')
+    decrypt_list = []
+    empty_string = ''
+    for x in input_string:
+        if x not in alphabet_string:
+            decrypt_letter = ' '
+            decrypt_list.append(decrypt_letter)
+            continue
+        else :
+            index = alphabet_string.index(x)
+            decrypt_index = index - 3
+        decrypt_letter = alphabet_string[decrypt_index]
+
+        decrypt_list.append(decrypt_letter)
+        decrypt_word = empty_string.join(decrypt_list)
+
+    print(decrypt_word)
+
+caesar_decrypt()
