@@ -1,0 +1,18 @@
+#Caesar Cipher
+encrypt_list = []
+
+def caesar():
+    alphabet_string = 'abcdefghijklmnopqrstuvwxyzabc'
+    input_string = input('Give me a word and I will give you the word, except encrypted ')
+    empty_string = ''
+    for x in input_string:
+        index = alphabet_string.index(x)
+        encrypt_index = index + 3
+        encrypt_letter = alphabet_string[encrypt_index]
+        encrypt_list.append(encrypt_letter)
+        encrypt_word = empty_string.join(encrypt_list)
+    print(encrypt_word)
+
+
+
+caesar()
